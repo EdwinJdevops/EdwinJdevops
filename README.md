@@ -81,3 +81,21 @@ Just code, cloud, and proof-of-work on every commit.
 **If you hire for output — check the repos.**
 
 </div>
+---
+
+<div align="center">
+
+### I'm 17. The infrastructure doesn't know that. Neither should you.
+
+While most people my age are figuring out what to study,  
+I'm shipping autonomous AI agents to production,  
+securing Kubernetes clusters against MITRE ATT&CK vectors,  
+and building tools that real engineers actually use.
+
+No degree. No shortcuts. No excuses.  
+Just code, cloud, and proof-of-work on every commit.
+
+**If you hire for potential — I'm already past that.**  
+**If you hire for output — check the repos.**
+
+</div>
