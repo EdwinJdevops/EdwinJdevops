@@ -2,8 +2,10 @@
 
 # Edwin Jonathan
 
-### Cloud Platform Engineer
-**Infrastructure Reliability · Cloud Security · Kubernetes · Infrastructure Automation**
+### Cloud & Platform Engineer
+**Infrastructure Reliability · Cloud Security · Controlled Infrastructure Automation**
+
+**[Engineering website — projects, case studies, and technical writing](https://edwinjdevops.github.io/engineering-platform/)**
 
 <a href="https://www.linkedin.com/in/edwin-jonathan-1094093b0">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white">
@@ -14,7 +16,7 @@
 <a href="https://x.com/TheCloudDeveng">
   <img src="https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white">
 </a>
-<a href="https://learn.microsoft.com/credentials/certifications/azure-fundamentals/">
+<a href="https://learn.microsoft.com/en-us/users/jonathanedwin-0146/credentials/certification/azure-fundamentals">
   <img src="https://img.shields.io/badge/AZ--900-Certified-0078D4?style=flat-square&logo=microsoftazure&logoColor=white">
 </a>
 
@@ -195,11 +197,13 @@ I write about infrastructure problems rather than technology checklists:
 - Reliability and observability
 - Controlled automation of infrastructure operations
 
-**[Read the engineering notes →](https://hashnode.com/@jonathandevops)**
+**[Read the engineering notes →](https://edwinjdevops.github.io/engineering-platform/articles/)** · [Hashnode archive](https://hashnode.com/@jonathandevops)
 
 ---
 
 ## Connect
+
+**Engineering website:** [edwinjdevops.github.io/engineering-platform](https://edwinjdevops.github.io/engineering-platform/)
 
 **LinkedIn:** [Edwin Jonathan](https://www.linkedin.com/in/edwin-jonathan-1094093b0)
 
