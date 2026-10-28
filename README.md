@@ -2,62 +2,77 @@
 
 # Edwin Jonathan
 
-**Cloud & Platform Engineer · Lagos, Nigeria**
+**I build infrastructure tools and investigate what happens when automation gets the answer wrong.**
 
-Infrastructure reliability · AWS and Terraform · Kubernetes and GitOps · Security and controlled automation
+Cloud infrastructure · Platform engineering · Open source · Systems reliability
 
-[Engineering website](https://edwinjdevops.github.io/engineering-platform/) · [Case studies](https://edwinjdevops.github.io/engineering-platform/projects/) · [Technical writing](https://edwinjdevops.github.io/engineering-platform/articles/) · [LinkedIn](https://www.linkedin.com/in/edwin-jonathan-1094093b0)
+[Explore tools](#tools-and-implementations) · [Read investigations](#engineering-investigations) · [Engineering website](https://edwinjdevops.github.io/engineering-platform/) · [Writing](https://edwinjdevops.github.io/engineering-platform/articles/)
 
 </div>
 
-## Engineering focus
+---
 
-I build and investigate cloud infrastructure and platform tooling where **observability, evidence quality, and safe changes** matter. I work with AWS, Terraform, Python, Kubernetes, GitOps, CI/CD, infrastructure security, and software-delivery systems.
+## Start here
 
-Repositories are evidence of implementation, not proof of production readiness. Each linked case study separates code and executed tests from integrations and behaviors not yet validated.
+| If you're looking for… | Open this | What to inspect |
+| --- | --- | --- |
+| Terraform drift analysis for AWS | **[DriftGuard](https://github.com/EdwinJdevops/driftguard)** | Drift engine, regression tests, reviewable remediation proposals |
+| Policy-controlled Kubernetes remediation | **[Warden](https://github.com/EdwinJdevops/warden)** | Manual-approval enforcement tests and dry-run PR boundary |
+| Evidence-based access containment experiments | **[SER](https://github.com/EdwinJdevops/ser)** | Offline decision core, recorded AWS experiments, validation limits |
+| Kubernetes security scanning examples | **[SENTINEL](https://github.com/EdwinJdevops/SENTINEL)** | Trivy/Kubescape workflow and report aggregation |
 
-## Selected engineering work
+These projects have different levels of readiness. **A working test, a cloud experiment, and a production-qualified system are not interchangeable.** Check each repository's scope and limitations before using its code in an operational environment.
 
-### [DriftGuard](https://github.com/EdwinJdevops/driftguard) — AWS infrastructure drift analysis
+## Tools and implementations
 
-Compares Terraform state and collected AWS observations, produces structured findings, and proposes remediation through reviewable GitHub pull requests rather than applying infrastructure changes automatically.
+### [DriftGuard — investigate AWS/Terraform drift](https://github.com/EdwinJdevops/driftguard)
 
-- [Merged regression fix (PR #3)](https://github.com/EdwinJdevops/driftguard/pull/3): fail on top-level AWS inventory enumeration errors and preserve indexed Terraform resource identities.
-- [Drift-engine tests](https://github.com/EdwinJdevops/driftguard/blob/main/backend/tests/test_drift_engine.py) and [CI](https://github.com/EdwinJdevops/driftguard/actions/workflows/ci.yml) are publicly inspectable.
-- **Boundary:** real cross-account AssumeRole integration and multi-tenant production operation are not established by the public checks. Some per-resource attribute-read failures still need stronger handling and tests.
+Compare recorded Terraform state with collected AWS observations, analyze supported differences, and prepare proposed changes for human review.
 
-[Case study](https://edwinjdevops.github.io/engineering-platform/projects/driftguard/) · [Inventory failure investigation](https://edwinjdevops.github.io/engineering-platform/articles/aws-inventory-failure-terraform-drift/)
+**The engineering question:** Can an inventory failure accidentally look like an absence of infrastructure?
 
-### [Warden](https://github.com/EdwinJdevops/warden) — Policy-bounded Kubernetes remediation
+[Inspect the regression fix](https://github.com/EdwinJdevops/driftguard/pull/3) · [Read drift-engine tests](https://github.com/EdwinJdevops/driftguard/blob/main/backend/tests/test_drift_engine.py) · [Open the case study](https://edwinjdevops.github.io/engineering-platform/projects/driftguard/)
 
-Explores a GitOps remediation path that keeps policy enforcement and manual approval separate from the generation of proposed changes.
+### [Warden — enforce remediation boundaries](https://github.com/EdwinJdevops/warden)
 
-- [Go regression tests](https://github.com/EdwinJdevops/warden/blob/master/controller/internal/remediation/tier_test.go) exercise the boundary preventing automatic merge under manual-approval policy tiers.
-- [Go CI workflow](https://github.com/EdwinJdevops/warden/actions/workflows/go-ci.yml) provides a repeatable source-level validation path.
-- **Boundary:** controller PR integration is dry-run by default; end-to-end production integration is not independently established.
+Explore a GitOps remediation design that separates proposed changes from authorization to merge them.
 
-[Case study](https://edwinjdevops.github.io/engineering-platform/projects/warden/)
+**The engineering question:** What prevents automated remediation from bypassing a human-approval policy?
 
-### [SENTINEL](https://github.com/EdwinJdevops/SENTINEL) — Kubernetes security scanning lab
+[Inspect approval-boundary tests](https://github.com/EdwinJdevops/warden/blob/master/controller/internal/remediation/tier_test.go) · [Open the case study](https://edwinjdevops.github.io/engineering-platform/projects/warden/)
 
-Contains Trivy and Kubescape scanning artifacts, a scheduled GitHub Actions workflow, and a small report aggregation script.
+### [SER — evaluate containment evidence](https://github.com/EdwinJdevops/ser)
 
-- [Security scanning workflow](https://github.com/EdwinJdevops/SENTINEL/blob/main/.github/workflows/sentinel-scan.yml).
-- **Boundary:** these artifacts do not establish a deployable runtime detection, observability or policy-enforcement platform.
+A bounded decision core and AWS experiments for assessing declared access checks after remediation.
 
-[Case study](https://edwinjdevops.github.io/engineering-platform/projects/sentinel/)
+**The engineering question:** A workflow completed. What evidence establishes whether access remains usable?
 
-## Engineering evidence and delivery
+[Inspect the implementation and validation record](https://github.com/EdwinJdevops/ser) · [Read live validation](https://github.com/EdwinJdevops/ser/blob/main/LIVE_VALIDATION.md)
 
-My [engineering website](https://edwinjdevops.github.io/engineering-platform/) publishes project boundaries, implementation details, technical investigations, and delivery records. The [website source](https://github.com/EdwinJdevops/engineering-platform) includes Hugo-based static delivery, source-controlled CI checks, and GitHub Pages deployment verification.
+## Engineering investigations
 
-I also provide cloud and DevOps engineering services through **Edwin Cloud DevOps Services**. Confidential client work is not presented as publicly verified project evidence.
+I publish failure cases, tests, and the limits of what an experiment can prove.
 
-## Contact and credentials
+- [AWS inventory failure and Terraform drift](https://edwinjdevops.github.io/engineering-platform/articles/aws-inventory-failure-terraform-drift/) — investigation into misleading results when collection fails
+- [Engineering case studies](https://edwinjdevops.github.io/engineering-platform/projects/) — implementation, tests, and explicit validation boundaries
+- [SER's experimental record](https://github.com/EdwinJdevops/ser) — live observations alongside unqualified integration paths
 
-- [Engineering website and services](https://edwinjdevops.github.io/engineering-platform/services/)
-- [LinkedIn](https://www.linkedin.com/in/edwin-jonathan-1094093b0)
-- [Technical articles](https://edwinjdevops.github.io/engineering-platform/articles/)
-- [Microsoft Azure Fundamentals credential](https://learn.microsoft.com/en-us/users/jonathanedwin-0146/credentials/certification/azure-fundamentals)
+## Learn, fork, challenge, contribute
 
-I welcome technical review, platform/cloud engineering roles, open-source collaboration, and clearly scoped infrastructure engagements.
+If you're learning infrastructure engineering, start with the tests and failure cases—not the screenshots. If you're reviewing a design, challenge its assumptions and verify the stated boundary.
+
+Each repository has its own setup, license, and contribution conditions. A public repository is not automatically licensed for unrestricted reuse: **check its LICENSE before copying or redistributing code.**
+
+I welcome reproducible bug reports, narrowly scoped pull requests, architecture review, and evidence that contradicts my assumptions.
+
+## Beyond the repositories
+
+I work across cloud infrastructure, security, automation, and software delivery. I also write about the engineering and organizational decisions behind these systems; the repositories are the inspectable part of that work.
+
+[Engineering site](https://edwinjdevops.github.io/engineering-platform/) · [Technical writing](https://edwinjdevops.github.io/engineering-platform/articles/) · [LinkedIn](https://www.linkedin.com/in/edwin-jonathan-1094093b0) · [Services](https://edwinjdevops.github.io/engineering-platform/services/)
+
+Microsoft credential: [Azure Fundamentals](https://learn.microsoft.com/en-us/users/jonathanedwin-0146/credentials/certification/azure-fundamentals)
+
+---
+
+*Source code is evidence of implementation. Production readiness requires separate qualification.*
