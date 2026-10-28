@@ -1,63 +1,34 @@
-<div align="center">
-
 # Edwin Jonathan
 
-**Cloud & Platform Engineer · Lagos, Nigeria**
+**Cloud / DevOps / Platform Engineer · Open-source contributor**
 
-Infrastructure reliability · AWS and Terraform · Kubernetes and GitOps · Security and controlled automation
+I build infrastructure software and investigate the failure cases behind its decisions: incomplete cloud inventories, unauthorized automation, and misleading success signals.
 
-[Engineering website](https://edwinjdevops.github.io/engineering-platform/) · [Case studies](https://edwinjdevops.github.io/engineering-platform/projects/) · [Technical writing](https://edwinjdevops.github.io/engineering-platform/articles/) · [LinkedIn](https://www.linkedin.com/in/edwin-jonathan-1094093b0)
+[Projects](https://edwinjdevops.github.io/engineering-platform/projects/) · [Engineering notes](https://edwinjdevops.github.io/engineering-platform/articles/) · [GitHub contributions](https://github.com/EdwinJdevops?tab=overview) · [LinkedIn](https://www.linkedin.com/in/edwin-jonathan-1094093b0)
 
-</div>
+---
 
-## Engineering focus
+### Built and investigated
 
-I build and investigate cloud infrastructure and platform tooling where **observability, evidence quality, and safe changes** matter. I work with AWS, Terraform, Python, Kubernetes, GitOps, CI/CD, infrastructure security, and software-delivery systems.
+| Project | Problem | Inspect the work |
+| :--- | :--- | :--- |
+| **[DriftGuard](https://github.com/EdwinJdevops/driftguard)** | AWS/Terraform drift analysis must not mistake a failed inventory for deleted resources. | [Regression fix](https://github.com/EdwinJdevops/driftguard/pull/3) · [Tests](https://github.com/EdwinJdevops/driftguard/blob/main/backend/tests/test_drift_engine.py) |
+| **[Warden](https://github.com/EdwinJdevops/warden)** | A remediation proposal must not bypass a required human approval. | [Policy-boundary tests](https://github.com/EdwinJdevops/warden/blob/master/controller/internal/remediation/tier_test.go) |
+| **[SER](https://github.com/EdwinJdevops/ser)** | A completed access-remediation workflow does not by itself demonstrate containment. | [AWS experiment record](https://github.com/EdwinJdevops/ser/blob/main/LIVE_VALIDATION.md) · [Source](https://github.com/EdwinJdevops/ser) |
+| **[SENTINEL](https://github.com/EdwinJdevops/SENTINEL)** | Make Kubernetes security-scan findings inspectable. | [Scan workflow](https://github.com/EdwinJdevops/SENTINEL/blob/main/.github/workflows/sentinel-scan.yml) |
 
-Repositories are evidence of implementation, not proof of production readiness. Each linked case study separates code and executed tests from integrations and behaviors not yet validated.
+### Engineering decisions, not just demos
 
-## Selected engineering work
+- **Failure should not look like success.** [Investigating AWS inventory errors in Terraform drift analysis](https://edwinjdevops.github.io/engineering-platform/articles/aws-inventory-failure-terraform-drift/).
+- **Authorization is not an implementation detail.** [Warden's manual-approval regression tests](https://github.com/EdwinJdevops/warden/blob/master/controller/internal/remediation/tier_test.go).
+- **Evidence has boundaries.** [SER's measured experiments and unresolved qualifications](https://github.com/EdwinJdevops/ser).
 
-### [DriftGuard](https://github.com/EdwinJdevops/driftguard) — AWS infrastructure drift analysis
+### Open-source work
 
-Compares Terraform state and collected AWS observations, produces structured findings, and proposes remediation through reviewable GitHub pull requests rather than applying infrastructure changes automatically.
+[Browse repositories](https://github.com/EdwinJdevops?tab=repositories) · [Browse public pull requests](https://github.com/pulls?q=is%3Apr+author%3AEdwinJdevops) · [Explore technical writing](https://edwinjdevops.github.io/engineering-platform/articles/)
 
-- [Merged regression fix (PR #3)](https://github.com/EdwinJdevops/driftguard/pull/3): fail on top-level AWS inventory enumeration errors and preserve indexed Terraform resource identities.
-- [Drift-engine tests](https://github.com/EdwinJdevops/driftguard/blob/main/backend/tests/test_drift_engine.py) and [CI](https://github.com/EdwinJdevops/driftguard/actions/workflows/ci.yml) are publicly inspectable.
-- **Boundary:** real cross-account AssumeRole integration and multi-tenant production operation are not established by the public checks. Some per-resource attribute-read failures still need stronger handling and tests.
+If you find a defect, bring a reproduction. If an architectural assumption fails, show the counterexample. Contributions and independent technical review are welcome; check each repository's license and instructions before reuse.
 
-[Case study](https://edwinjdevops.github.io/engineering-platform/projects/driftguard/) · [Inventory failure investigation](https://edwinjdevops.github.io/engineering-platform/articles/aws-inventory-failure-terraform-drift/)
+---
 
-### [Warden](https://github.com/EdwinJdevops/warden) — Policy-bounded Kubernetes remediation
-
-Explores a GitOps remediation path that keeps policy enforcement and manual approval separate from the generation of proposed changes.
-
-- [Go regression tests](https://github.com/EdwinJdevops/warden/blob/master/controller/internal/remediation/tier_test.go) exercise the boundary preventing automatic merge under manual-approval policy tiers.
-- [Go CI workflow](https://github.com/EdwinJdevops/warden/actions/workflows/go-ci.yml) provides a repeatable source-level validation path.
-- **Boundary:** controller PR integration is dry-run by default; end-to-end production integration is not independently established.
-
-[Case study](https://edwinjdevops.github.io/engineering-platform/projects/warden/)
-
-### [SENTINEL](https://github.com/EdwinJdevops/SENTINEL) — Kubernetes security scanning lab
-
-Contains Trivy and Kubescape scanning artifacts, a scheduled GitHub Actions workflow, and a small report aggregation script.
-
-- [Security scanning workflow](https://github.com/EdwinJdevops/SENTINEL/blob/main/.github/workflows/sentinel-scan.yml).
-- **Boundary:** these artifacts do not establish a deployable runtime detection, observability or policy-enforcement platform.
-
-[Case study](https://edwinjdevops.github.io/engineering-platform/projects/sentinel/)
-
-## Engineering evidence and delivery
-
-My [engineering website](https://edwinjdevops.github.io/engineering-platform/) publishes project boundaries, implementation details, technical investigations, and delivery records. The [website source](https://github.com/EdwinJdevops/engineering-platform) includes Hugo-based static delivery, source-controlled CI checks, and GitHub Pages deployment verification.
-
-I also provide cloud and DevOps engineering services through **Edwin Cloud DevOps Services**. Confidential client work is not presented as publicly verified project evidence.
-
-## Contact and credentials
-
-- [Engineering website and services](https://edwinjdevops.github.io/engineering-platform/services/)
-- [LinkedIn](https://www.linkedin.com/in/edwin-jonathan-1094093b0)
-- [Technical articles](https://edwinjdevops.github.io/engineering-platform/articles/)
-- [Microsoft Azure Fundamentals credential](https://learn.microsoft.com/en-us/users/jonathanedwin-0146/credentials/certification/azure-fundamentals)
-
-I welcome technical review, platform/cloud engineering roles, open-source collaboration, and clearly scoped infrastructure engagements.
+[Engineering website](https://edwinjdevops.github.io/engineering-platform/) · [Contact](https://edwinjdevops.github.io/engineering-platform/)
