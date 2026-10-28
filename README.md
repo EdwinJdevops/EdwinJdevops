@@ -1,6 +1,6 @@
 # Edwin Jonathan
 
-**Cloud, DevOps & Platform Engineer · Open-source contributor · Founder, Aurora Malos**
+**Cloud / DevOps / Platform Engineer · Open-source contributor · Founder, [Aurora](https://github.com/AuroraPlatforminfra)**
 
 I build infrastructure tools and investigate how they behave when cloud inventory is incomplete, automated changes cross an approval boundary, or a remediation reports success without enough evidence.
 
@@ -19,6 +19,10 @@ I build infrastructure tools and investigate how they behave when cloud inventor
 
 [More projects and case studies](https://edwinjdevops.github.io/engineering-platform/projects/)
 
+## Aurora
+
+I'm developing [Aurora](https://github.com/AuroraPlatforminfra), an MLOps infrastructure project exploring Kubernetes deployment validation, configuration drift analysis, and reviewable remediation changes. The [core repository](https://github.com/AuroraPlatforminfra/aurora-core) includes application source, tests, and deployment tooling; its documented production claims still require independent validation.
+
 ## Contributions and technical work
 
 - [Pull requests across GitHub](https://github.com/pulls?q=is%3Apr+author%3AEdwinJdevops) — contributions and review history, including work outside my repositories.
@@ -26,6 +30,10 @@ I build infrastructure tools and investigate how they behave when cloud inventor
 - [Engineering writing](https://edwinjdevops.github.io/engineering-platform/articles/) — implementation notes, investigations, and technical decisions.
 
 Bug reports with reproductions, counterexamples to architectural assumptions, and focused code reviews are welcome. Check the individual project's documentation and license before reusing code.
+
+**Engineering services:** [Cloud and DevOps engagements](https://edwinjdevops.github.io/engineering-platform/services/) — separate from the open-source projects above.
+
+**Credential:** [Microsoft Azure Fundamentals](https://learn.microsoft.com/en-us/users/jonathanedwin-0146/credentials/certification/azure-fundamentals). Engineering changes and contributions are linked above rather than presented as unsupported achievements.
 
 ---
 
